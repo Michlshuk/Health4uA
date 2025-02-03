@@ -1,0 +1,397 @@
+/* body {
+    background: #000 url(https://unsplash.it/1600/1000/?random);
+    background-size: cover;
+    background-position: center;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.9);
+    color: #fff;
+    padding: 0 2rem;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.03);
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+  }
+  
+  .navbar {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+  }
+  
+  .navbar__menu {
+    position: relative;
+    display: flex;
+  }
+  
+  .navbar__link {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: center;
+    justify-content: center;
+    height: calc(1rem * 3.5); 
+    width: 10rem;
+    color: #fff;
+    transition: 250ms ease all;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: 500ms ease all;
+  }
+  
+  .navbar__link svg {
+    transition: 500ms ease all;
+  }
+  
+  .navbar__link:hover svg {
+    stroke: #C4151C; 
+  }
+  
+  .navbar:not(:hover) .navbar__link:focus,
+  .navbar__link:hover span {
+    opacity: 1;
+    transform: translate(0);
+  }
+  
+  .navbar__item:last-child:before {
+    content: '';
+    position: absolute;
+    left: -8rem;
+    margin-left: 5rem; 
+    bottom: -1.25rem;
+    height: 0.5rem;
+    width: 2px;
+    background: #C4151C; 
+    box-shadow: 0 -0.5rem #C4151C, 0 -0.5rem #C4151C, 0 0 3rem 0.5rem #C4151C, 2rem 0 0 rgba(255, 255, 255, 0.2), -3rem 0 0 rgba(255, 255, 255, 0.2);
+    transition: 500ms ease all;
+  }
+  
+  .navbar__item:first-child:nth-last-child(1),
+  .navbar__item:first-child:nth-last-child(1) ~ li {
+    left: 0;
+  }
+  
+  .navbar__item:first-child:nth-last-child(2),
+  .navbar__item:first-child:nth-last-child(2) ~ li {
+    left: calc((100% / 2) * (1));
+  }
+  
+  .navbar__item:last-child:hover:before {
+    left: calc((100% / 12) * (12 - 1));
+  }
+   */
+   /* body {
+    display: flex;
+    height: 100vh;
+    padding: 0 5rem;
+    box-sizing: border-box;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-image: #fff;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.menu {
+    background-image: linear-gradient(to right, #090ea9 0%, #090ea9 100%);
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    color: #ffffff;
+
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 300;
+}
+
+.menu a:focus,
+.menu a:focus-within {
+    outline: none;
+}
+
+.menu > ol {
+    display: flex;
+}
+
+.menu > ol > li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 45rem) {
+    .menu > ol {
+        justify-content: space-around;
+    }
+
+    .menu > ol:hover > li:first-child > a,
+    .menu > ol:focus-within > li:first-child > a {
+        opacity: 0.6;
+    }
+
+    .menu > ol > li {
+        flex: 1 1 0;
+    }
+
+ 
+    .menu > ol > li > a {
+        padding: 2rem 0;
+        font-size: 1.6vw;
+        position: relative;
+        width:140%;
+        text-align: center;
+        z-index: 1;
+        opacity: 0.7;
+        transition: 250ms ease all;
+    }
+
+    .menu > ol > li > ol {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        visibility: hidden;
+    }
+
+    .menu > ol > li > ol > li {
+        margin-top: 0.5rem;
+        transition: 250ms cubic-bezier(0.42, 0.83, 0.49, 1.35) transform;
+        transform: scale(0);
+    }
+
+    .menu > ol > li > ol > li > a {
+        display: block;
+        text-align: center;
+        border-radius: 0.2rem;
+        padding: 1rem 0.5rem;
+        font-size: 1.4vw;
+        background: #031263;
+        color: rgb(255, 252, 252);
+        transition: 250ms ease all;
+    }
+
+    .menu > ol > li > ol > li > a:hover,
+    .menu > ol > li > ol > li > a:focus,
+    .menu > ol > li > ol > li > a:focus-within {
+        box-shadow: inset 0 0 0 3rem rgba(0, 0, 0, 0.1);
+        color: rgba(255, 255, 255, 1);
+    }
+
+    .menu > ol > li:hover > a,
+    .menu > ol > li:focus > a,
+    .menu > ol > li:focus-within > a {
+        opacity: 1 !important;
+    }
+
+    .menu > ol > li:hover > ol,
+    .menu > ol > li:focus > ol,
+    .menu > ol > li:focus-within > ol {
+        visibility: visible;
+    }
+}
+
+@media (max-width: 45rem) {
+    .menu {
+        background-image: linear-gradient(to bottom, #ed6ea0 0%, #ec8c69 100%);
+    }
+
+    .menu a {
+        font-size: 1.4rem;
+        padding: 1rem 0.5rem;
+    }
+
+    .menu > ol {
+        flex-direction: column;
+    }
+
+    .menu > ol > li {
+        flex-direction: column;
+        align-items: stretch;
+        text-align: center;
+    }
+
+    .menu > ol > li > a:nth-last-child(2) {
+        position: relative;
+    }
+
+    .menu > ol > li > a:nth-last-child(2):after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        margin-top: -0.25rem;
+        right: 1.5rem;
+        border-top: 0.5rem solid #fff;
+        border-left: 0.3rem solid transparent;
+        border-right: 0.3rem solid transparent;
+        transition: 250ms ease all;
+    }
+
+    .menu > ol > li:focus-within > a:nth-last-child(2):after,
+    .menu > ol > li:focus > a:nth-last-child(2):after,
+    .menu > ol > li > a:hover:nth-last-child(2):after {
+        transform: rotate(180deg);
+    }
+
+    .menu > ol > li > ol {
+        background: rgba(0, 0, 0, 0.1);
+        box-shadow: inset 0.1rem 0.1rem 0.5rem rgba(0, 0, 0, 0.15);
+        overflow: hidden;
+        max-height: 0;
+        transition: 250ms ease all;
+    }
+
+    .menu > ol > li > ol > li > a {
+        display: block;
+        font-size: 1.2rem;
+    }
+} */
+/* styles.css */
+/* body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+}
+
+.main-header {
+    background-color: #ffffff;
+    border-bottom: 1px solid #a49b9b;
+    padding: 20px 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
+}
+
+.nav-menu {
+    text-align: center;
+}
+
+.menu-list {
+    list-style: none;
+    display: inline-flex;
+    padding: 0;
+    margin: 0;
+
+}
+
+.menu-list li {
+    position: relative;
+}
+
+.menu-list li a {
+    text-decoration: none;
+    color: #001666;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: color 0.3s ease;
+}
+
+.menu-list li a:hover {
+    color: #001666;
+    text-decoration: underline;
+}
+
+.menu-list li a:active {
+    color: #20285c;
+} */
+
+/* עיצוב כללי */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    direction: rtl;
+    background-color: #ffffff;
+  }
+  
+  /* כותרת ראשית */
+  .main-header {
+    width: 100%;
+    padding: 10px 0;
+    background-color: #ffffff;
+    border-bottom: 1.5px solid #4467c9;
+    box-sizing: border-box;
+   
+  }
+  
+  /* עיצוב המכולה */
+  .container {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* אזור אישי */
+  .user-area {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .user-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .user-area span {
+    font-size: 16px;
+    font-weight: bold;
+    color: #0047b6;
+  }
+  
+  /* תפריט ניווט */
+  .nav-menu {
+    display: flex;
+  }
+  
+  .menu-list {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    padding-right: 15px; /* ריווח התפריט מהקצה הימני */
+  }
+  
+  .menu-list li a {
+    text-decoration: none;
+    color: #0047b6;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 5px 20px; /* ריווח פנימי אופקי */
+    transition: color 0.3s ease;
+  }
+  
+  .menu-list li a:hover {
+    color: #002f7f;
+    text-decoration: underline;
+  }
+  
+  
+  /* קווים מפרידים */
+  .menu-list li:not(:last-child)::after {
+    content: "|";
+    color: #0047b6;
+    margin-right: 10px;
+  }
+   
