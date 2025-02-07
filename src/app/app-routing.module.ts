@@ -23,6 +23,7 @@ const routes: Routes = [
 {path:'SignUp', component:SignUpComponent},
 {path: 'Search',component:SearchOrAddComponent},
 {path:'UserArea',component:UserAreaComponent}
+
 // {path:'Search', component:},
 // {path:'Enter', component:},
 // {path:'UserArea', component:},

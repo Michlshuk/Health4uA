@@ -12,6 +12,7 @@ import { HomeComponent } from './components/home/home.component';
 import { SearchOrAddComponent } from './components/search-or-add/search-or-add.component';
 import { UserAreaComponent } from './components/user-area/user-area.component';
 import { MedicinesComponentComponent } from './components/medicines-component/medicines-component.component';
+import { RouterModule } from '@angular/router';
 
 
 @NgModule({
@@ -29,6 +30,7 @@ import { MedicinesComponentComponent } from './components/medicines-component/me
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    RouterModule,
     ReactiveFormsModule,
     
   ],

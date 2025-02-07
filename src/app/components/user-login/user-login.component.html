@@ -104,13 +104,14 @@
     <div class="container">
         <div class="form-container">
             <h2>כניסה</h2>
-            <form action="#" method="post">
+            <form (ngSubmit)="Enter()">
+            <!-- <form (ngSubmit)="Enter()" action="#" method="post"> -->
                 <label for="username">שם משתמש</label>
                 <input type="text" id="username" name="username" placeholder="הזן שם משתמש" required>
 
                 <label for="password">סיסמה</label>
                 <input type="password" id="password" name="password" placeholder="הזן סיסמה" required>
-
+          
                 <button type="submit" class="btn">כניסה </button>
             </form>
         </div>
@@ -120,3 +121,4 @@
 <div class="image-container">
     <img src="../../../assets/picture/תמונה3.png" alt="קישוט צבעוני" />
 </div>
+<router-outlet></router-outlet>

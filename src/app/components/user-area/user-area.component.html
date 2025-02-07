@@ -1,1 +1,54 @@
-<p>user-area works!</p>
+<!-- <p>user-area works!</p>
+<html lang="he">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>האזור האישי</title>
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="update-btn">עדכון פרטים אישיים</button>
+        </header>
+        <div class="profile">
+            <img src="../../../assets/picture/image.png" alt="תמונת משתמש" class="profile-pic">
+            <h2 class="username">שם המשתמש</h2>
+        </div>
+        <button class="history-btn">הצגת היסטוריית תרופות / ציוד</button>
+    </div>
+</body>
+</html> -->
+<body>
+<button class="initial" id="loginbtn" #loginbtn> עדכון פרטים אישיים</button>
+<div id="form" class="login-form" #userBox>
+  <div class="img-area">
+    <span class="closebtn" id="close" #closebtn><b>&times;</b></span>
+  </div>
+
+  <div class="user-area">
+    <label for="usname"><b> שם פרטי </b></label>
+    <input type="text" placeholder="username" name="שם פרטי">
+    <label for="usname"><b>טלפון</b></label>
+    <input type="text" placeholder="phone" name="טלפון">
+    <label for="usname"><b> עיר\יישוב</b></label>
+    <input type="text" placeholder="city" name="עיר\יישוב">
+    <label for="usname"><b> רחוב</b></label>
+    <input type="text" placeholder="street" name="רחוב">
+    <label for="usname"><b> מספר בנין</b></label>
+    <input type="text" placeholder="buildingnum" name="מספר בנין">
+    <label for="psw"><b> סיסמה </b></label>
+    <input type="password" placeholder="password" name="סיסמה">
+
+    <button class="savee" type="submit">שמור שינויים </button>
+    <!-- <label>
+      <input type="checkbox" checked=checked><b>Remember Me </b>
+    </label> -->
+  </div>
+  <!-- <div class="footer">
+    <button type="button" class="cancelbtn">Cancel</button>
+    <a href="#">Forget Password</a>
+  </div> -->
+</div>
+
+<!-- <router-outlet></router-outlet> -->
