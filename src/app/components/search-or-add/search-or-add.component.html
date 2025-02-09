@@ -24,7 +24,7 @@
 
 </body>
 </html> -->
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="he" dir="rtl">
 <head>
   <meta charset="UTF-8">
@@ -53,4 +53,55 @@
 </body>
 </html>
 
-  
+   -->
+   <!DOCTYPE html>
+   <html lang="he" dir="rtl">
+   <head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+   </head>
+   <body>
+     <div class="container">
+       <div class="button-wrapper">
+         <i class="icon-search"></i>
+         <button class="btn search-btn" (click)="openPopup()">
+           <span>חפש תרופה / מכשור רפואי</span>
+         </button>
+       </div>
+   
+       <div class="button-wrapper">
+         <i class="icon-add"></i>
+         <button class="btn add-btn">
+           <span>הוסף תרופה / מכשור רפואי</span>
+         </button>
+       </div>
+     </div>
+   
+     <!-- פופאפ לחיפוש -->
+     <div class="popup" *ngIf="isPopupOpen">
+       <div class="popup-content">
+         <button (click)="openList('medicine')">תרופה</button>
+         <button (click)="openList('equipment')">מכשור רפואי</button>
+         <div *ngIf="selectedCategory === 'medicine'">
+           <h3>רשימת תרופות</h3>
+           <ul>
+             <li>תרופה 1</li>
+             <li>תרופה 2</li>
+             <li>תרופה 3</li>
+           </ul>
+         </div>
+         <div *ngIf="selectedCategory === 'equipment'">
+           <h3>רשימת מכשור רפואי</h3>
+           <ul>
+             <li>מכשור רפואי 1</li>
+             <li>מכשור רפואי 2</li>
+             <li>מכשור רפואי 3</li>
+           </ul>
+         </div>
+         <button (click)="closePopup()">סגור</button>
+       </div>
+     </div>
+   </body>
+   </html>
+   

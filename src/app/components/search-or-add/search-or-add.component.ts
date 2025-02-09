@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-or-add.component.css']
 })
 export class SearchOrAddComponent {
+  isPopupOpen = false;
+  selectedCategory: string | null = null;
 
+  openPopup(): void {
+    this.isPopupOpen = true;
+  }
+
+  closePopup(): void {
+    this.isPopupOpen = false;
+    this.selectedCategory = null;
+  }
+
+  openList(category: string): void {
+    this.selectedCategory = category;
+  }
 }
+

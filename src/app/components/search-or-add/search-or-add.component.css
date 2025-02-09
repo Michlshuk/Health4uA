@@ -1,69 +1,118 @@
 /* עיצוב כללי */
 body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Arial', sans-serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60vh;
-    /* background-color: #f4f4f4; */
-  }
-  
-  /* קונטיינר מרכזי */
-  .container {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    align-items: flex-start;
-  }
-  
-  /* עטיפת כפתור ואייקון */
-  .button-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 10px; /* רווח בין הכפתור לאייקון */
-  }
-  
-  /* כפתורים */
-  .btn {
-    padding: 10px 20px;
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .search-btn {
-    background-color: orangered;
-    color: white;
-  }
-  
-  .search-btn:hover {
-    background-color:rgb(238, 93, 40);
-  }
-  
-  .add-btn {
-    background-color: orangered;
-    color: white;
-  }
-  
-  .add-btn:hover {
-    background-color:rgb(238, 93, 40);
-  }
-  
-  /* אייקונים */
-  .icon-search::before {
-    content: "🔍";
-    font-size: 1.2rem;
-    color: #0611e2;
-  }
-  
-  .icon-add::before {
-    content: "➕";
-    font-size: 1.2rem;
-    color: #2c2f71;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60vh;
+  /* background-color: #f4f4f4; */
+}
+
+/* קונטיינר מרכזי */
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* עטיפת כפתור ואייקון */
+.button-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* רווח בין הכפתור לאייקון */
+}
+
+/* כפתורים */
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.search-btn {
+  background-color: orangered;
+  color: white;
+}
+
+.search-btn:hover {
+  background-color: rgb(238, 93, 40);
+}
+
+.add-btn {
+  background-color: orangered;
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: rgb(238, 93, 40);
+}
+
+/* אייקונים */
+.icon-search::before {
+  content: "🔍";
+  font-size: 1.2rem;
+  color: #0611e2;
+}
+
+.icon-add::before {
+  content: "➕";
+  font-size: 1.2rem;
+  color: #2c2f71;
+}
+
+/* פופאפ */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5); /* רקע חצי שקוף */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* לוודא שהפופאפ יופיע מעל כל האלמנטים */
+}
+
+/* תוכן הפופאפ */
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  width: 300px; /* גודל פופאפ קבוע */
+}
+
+.popup button {
+  margin: 10px;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  background-color: orangered;
+  color: white;
+}
+
+.popup button:hover {
+  background-color: rgb(238, 93, 40);
+}
+
+/* עיצוב רשימות בתוכן הפופאפ */
+.popup-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.popup-content li {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
